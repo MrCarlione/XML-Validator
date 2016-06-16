@@ -30,11 +30,11 @@
             </Menu>
             
             <Label Grid.Row="0" Grid.Column="0" x:Name="pathToXSD" Width="125" VerticalAlignment="Top" Content="Выберите .xsd схему" Margin="-10,35,10,10" />
-            <TextBox x:Name="visualizeXSDPath" Grid.Column="1" Grid.ColumnSpan="3" Height="25" Width="380" IsReadOnly="True" Margin="0,35,10,50" HorizontalAlignment="Left" VerticalContentAlignment="Center"/>
+            <TextBox x:Name="visualizeXSDPath" Grid.Column="1" Grid.ColumnSpan="3" Height="25" Width="360" IsReadOnly="True" Margin="0,35,10,50" HorizontalAlignment="Left" VerticalContentAlignment="Center"/>
             <Button x:Name="chooseXSDButton" Grid.Column="4" HorizontalAlignment="Right" Height="25" Width="70" Margin="10,35,10,50" Content="..." Click="chooseXSDButton_Click" />
 
             <Label x:Name="pathToXML" Grid.Row="0" Grid.Column="0" Width="125" VerticalAlignment="Top" Content="Выберите .xml файл" Margin="-10,70,10,0" />
-            <TextBox x:Name="visualizeXMLPath" Grid.Column="1" Grid.ColumnSpan="3" Height="25" Width="380" IsReadOnly="True" Margin="0,70,10,10" HorizontalAlignment="Left" VerticalContentAlignment="Center" />
+            <TextBox x:Name="visualizeXMLPath" Grid.Column="1" Grid.ColumnSpan="3" Height="25" Width="360" IsReadOnly="True" Margin="0,70,10,10" HorizontalAlignment="Left" VerticalContentAlignment="Center" />
             <Button x:Name="chooseXMLButton" Grid.Column="4" HorizontalAlignment="Right" Height="25" Width="70" Margin="10,70,10,10" Content="..." Click="chooseXMLButton_Click" />
 
             <Button x:Name="validateButton" Grid.Row="4" Grid.Column="0" Height="25" Content="Валидировать"  Margin="10,45,10,15" ToolTip="Проверить файл по указанной схеме" Click="validateButton_Click" />

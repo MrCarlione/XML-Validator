@@ -155,10 +155,11 @@ namespace Validator
 
         private void ValidationHandler(object sender, ValidationEventArgs e)
         {
-            if (e.Severity == XmlSeverityType.Warning)
-                throw new InvalidOperationException("Предупреждение: " + e.Message, e.Exception);
-            else
-                throw new InvalidOperationException("Ошибка: " + e.Message, e.Exception);
+            switch (e.Severity)
+            {
+                case XmlSeverityType.Warning: WriteToOutput("Предупреждение: " + e.Message + ".\n" + e.Exception); break;
+                case XmlSeverityType.Error: WriteToOutput("Ошибка: " + e.Message + ".\n" + e.Exception); break;
+            }
         }
     }
 }

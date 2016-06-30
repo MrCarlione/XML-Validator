@@ -98,6 +98,12 @@
   <ItemGroup>
     <Resource Include="Content\_icon_XSD.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XmlSampleGenerator\XmlSampleGenerator.csproj">
+      <Project>{6608d8a0-b9b7-4bbf-ad51-7c8c68137e61}</Project>
+      <Name>XmlSampleGenerator</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -21,11 +21,11 @@
                 <RowDefinition Height="0.25*"></RowDefinition>
             </Grid.RowDefinitions>
             <Menu Grid.Row="0" Grid.ColumnSpan="4" Height="25" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
-                <MenuItem Header="File" VerticalContentAlignment="Center">
+                <MenuItem Header="File"  VerticalContentAlignment="Center" Height="25">
                     <MenuItem Header="Save" />
-                    <MenuItem Header="Save as" />
+                    <MenuItem Header="Save as" Click="MenuItemSaveAs_Click"/>
                     <Separator></Separator>
-                    <MenuItem Header="Exit" />
+                    <MenuItem x:Name="exitButton" Header="Exit" Click="exitButton_Click" />
                 </MenuItem>
             </Menu>
             
@@ -40,7 +40,7 @@
             <Button x:Name="validateButton" Grid.Row="4" Grid.Column="0" Height="25" Content="Валидировать"  Margin="10,45,10,15" ToolTip="Проверить файл по указанной схеме" Click="validateButton_Click" />
             <Button x:Name="generateButton" Grid.Row="4" Grid.Column="1" Height="25" Content="Сгенерировать" Margin="10,45,10,15" ToolTip="Создать пример .xml-файла по схеме" Click="generateButton_Click" />
 
-            <TextBox x:Name="outputTextBox" Grid.Row="1" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="4" VerticalAlignment="Center" VerticalScrollBarVisibility="Visible" Height="260" TextWrapping="Wrap" Margin="10,0,10,50" />
+            <TextBox x:Name="outputTextBox" Grid.Row="1" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="4" VerticalAlignment="Center" VerticalScrollBarVisibility="Visible" Height="260" IsReadOnly="True" TextWrapping="Wrap" Margin="10,0,10,50" />
 
             <Button x:Name="clearButton" Grid.Row="4" Grid.Column="4" Width="70" Height="20" HorizontalAlignment="Right" Background="White" BorderThickness="0" Command="{Binding Path=ClearLogItems}" Content="Очистить" Margin="10,60,10,30" Click="clearButton_Click" />
 
